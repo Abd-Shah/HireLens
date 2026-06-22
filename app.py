@@ -32,6 +32,12 @@ st.set_page_config(
 st.markdown(
     """
     <style>
+    .stApp {
+        background: #fff4f7;
+    }
+    [data-testid="stAppViewContainer"] {
+        background: #fff4f7;
+    }
     .main-title {font-size: 2.2rem; font-weight: 800; margin-bottom: 0.2rem;}
     .subtle {color: #6b7280; font-size: 0.98rem;}
     .score-card {border: 1px solid #e5e7eb; border-radius: 18px; padding: 22px; background: #ffffff;}
@@ -41,6 +47,38 @@ st.markdown(
     .good {color: #15803d; font-weight: 700;}
     .warn {color: #b45309; font-weight: 700;}
     .bad {color: #b91c1c; font-weight: 700;}
+    .landing {
+        min-height: 58vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        text-align: center;
+    }
+    .landing-title {
+        font-size: clamp(3rem, 9vw, 7rem);
+        font-weight: 900;
+        color: #111827;
+        margin-bottom: 1.5rem;
+    }
+    .landing-subtitle {
+        color: #4b5563;
+        font-size: 1.15rem;
+        margin-bottom: 2rem;
+    }
+    .landing-button div[data-testid="stButton"] > button {
+        background: #ff4f6d;
+        border: 0;
+        border-radius: 3px;
+        color: #ffffff;
+        font-weight: 700;
+        height: 42px;
+        min-height: 42px;
+        padding: 0 28px;
+    }
+    .landing-button div[data-testid="stButton"] > button p {
+        color: #ffffff;
+    }
     </style>
     """,
     unsafe_allow_html=True,
@@ -190,6 +228,29 @@ def score_class(score: int) -> str:
     if score >= 60:
         return "warn"
     return "bad"
+
+
+if "started" not in st.session_state:
+    st.session_state.started = False
+
+if not st.session_state.started:
+    st.markdown(
+        """
+        <div class="landing">
+            <div class="landing-title">HireLens</div>
+            <div class="landing-subtitle">Match your resume to the job before you apply.</div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+    _, button_col, _ = st.columns([2.25, 0.5, 2.25])
+    with button_col:
+        st.markdown('<div class="landing-button">', unsafe_allow_html=True)
+        if st.button("Get Started", type="primary", use_container_width=True):
+            st.session_state.started = True
+            st.rerun()
+        st.markdown("</div>", unsafe_allow_html=True)
+    st.stop()
 
 
 st.markdown('<div class="main-title">HireLens AI JD Aligner</div>', unsafe_allow_html=True)
