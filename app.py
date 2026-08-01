@@ -132,7 +132,7 @@ st.markdown(
     }
     .hero-nav-cta {
         background: transparent;
-        color: rgba(255, 255, 255, 0.88);
+        color: #4aa8ff !important;
         border-radius: 999px;
         padding: 0.58rem 1.2rem;
         text-decoration: none;
@@ -140,7 +140,7 @@ st.markdown(
         transition: background 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
     }
     .hero-link {
-        color: rgba(255, 255, 255, 0.88);
+        color: #4aa8ff !important;
         text-decoration: none;
         border-radius: 999px;
         padding: 0.58rem 1rem;
@@ -150,13 +150,13 @@ st.markdown(
     .hero-link:active,
     .hero-nav-cta:visited,
     .hero-nav-cta:active {
-        color: rgba(255, 255, 255, 0.96);
+        color: #4aa8ff !important;
         text-decoration: none;
     }
     .hero-link:hover,
     .hero-nav-cta:hover {
         background: #ffffff;
-        color: #0b3d75;
+        color: #0b3d75 !important;
         box-shadow: 0 10px 24px rgba(255, 255, 255, 0.18);
         text-decoration: none;
     }
