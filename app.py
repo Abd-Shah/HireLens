@@ -234,12 +234,12 @@ st.markdown(
         text-decoration: none;
     }
     .score-float {
-        width: 620px;
-        min-height: 500px;
+        width: 560px;
+        min-height: 430px;
         align-self: center;
         justify-self: start;
         position: relative;
-        transform: translateX(-70px);
+        transform: translate(-30px, 60px);
         animation: fadeInUp 0.7s ease-out 1.1s both;
     }
     .hero-insight-card {
@@ -253,24 +253,24 @@ st.markdown(
         backdrop-filter: blur(16px);
     }
     .hero-insight-card.primary {
-        width: 285px;
-        min-height: 270px;
-        top: -100px;
-        left: -50px;
+        width: 275px;
+        min-height: 260px;
+        top: -45px;
+        left: 142px;
         z-index: 3;
     }
     .hero-insight-card.top {
         width: 210px;
         min-height: 125px;
-        top: 180px;
-        left: -200px;
+        top: 210px;
+        left: 0;
         z-index: 2;
     }
     .hero-insight-card.bottom {
         width: 235px;
         min-height: 142px;
-        right: 200px;
-        top: 180px;
+        right: 0;
+        top: 210px;
         z-index: 4;
     }
     .card-kicker {
