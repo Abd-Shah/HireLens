@@ -270,7 +270,7 @@ st.markdown(
         width: 235px;
         min-height: 142px;
         right: 0;
-        top: 210px;
+        top: 285px;
         z-index: 4;
     }
     .card-kicker {
