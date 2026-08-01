@@ -262,8 +262,8 @@ st.markdown(
     .hero-insight-card.top {
         width: 210px;
         min-height: 125px;
-        top: 210px;
-        left: 0;
+        top: 285px;
+        left: -8px;
         z-index: 2;
     }
     .hero-insight-card.bottom {
